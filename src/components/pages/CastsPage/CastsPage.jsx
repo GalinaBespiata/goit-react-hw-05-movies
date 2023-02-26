@@ -43,7 +43,7 @@ export const CastPage = () => {
                   alt={castInfo.name}
                 />
 
-                <p> {name}</p>
+                <p style={{ marginLeft: '10px' }}> {name}</p>
                 <p> (Character {character})</p>
               </li>
             );

@@ -38,14 +38,7 @@ export default function MoviesPage() {
       {loading && <Loader />}
       <SearchForm />
 
-      {films.length > 0 ? (
-        <FilmsWrap films={films} location={location} />
-      ) : (
-        <h3 style={{ textAlign: 'center' }}>
-          {' '}
-          We don`t have movie about this ( ˘︹˘ )
-        </h3>
-      )}
+      {films.length > 0 && <FilmsWrap films={films} location={location} />}
     </div>
   );
 }
