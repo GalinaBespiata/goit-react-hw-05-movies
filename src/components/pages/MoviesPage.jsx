@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
+
+import { useSearchParams, useLocation } from 'react-router-dom';
 import { FetchFilmByWord } from '../ApiFetch/FetchFilmIByWord.jsx';
 import { FilmsWrap } from 'components/FilmsWrap/FilmsWrap.jsx';
 import { SearchForm } from '../SearchForm/SearchForm.jsx';
-import { useSearchParams, useLocation } from 'react-router-dom';
 
 import { Loader } from '../Loader/Loader.jsx';
 
