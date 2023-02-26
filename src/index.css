@@ -7,9 +7,40 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 20px;
+  color: rgb(17, 58, 24);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+}
+ul {
+  margin: 20px 0 0 20px;
+
+  padding: 10px;
+  list-style: square;
+}
+
+a {
+  padding: 5px 0;
+}
+/* a:hover {
+  text-decoration: underline;
+} */
+.active {
+  color: rgb(22, 99, 48);
+  border-bottom: 2px solid rgb(65, 148, 74);
+}
+.link {
+  color: rgb(35, 92, 48);
 }

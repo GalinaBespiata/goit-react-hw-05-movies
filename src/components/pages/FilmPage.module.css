@@ -1,0 +1,42 @@
+.itemBlock {
+  display: flex;
+  align-items: flex-start;
+}
+.posterBlock {
+  margin-right: 30px;
+}
+.filmPoster {
+  width: 100%;
+  padding: 20px;
+  width: 200px;
+}
+.descriptionBlock {
+  padding: 20px;
+}
+.filmTitle {
+  margin-bottom: 20px;
+}
+.textTitle {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.linkTitle {
+  margin-left: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.filmOverview {
+  margin-bottom: 20px;
+}
+.filmGenre {
+  display: inline;
+  margin-right: 20px;
+}
+.additionalInfo {
+  margin-bottom: 20px;
+}
+.link {
+  margin-left: 20px;
+  color: rgb(37, 88, 54);
+  text-decoration: none;
+}

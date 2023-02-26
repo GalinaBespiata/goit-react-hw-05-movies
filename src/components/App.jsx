@@ -1,16 +1,79 @@
+import React from 'react';
+import { Routes, Route, NavLink, Link } from 'react-router-dom';
+// import { Layout } from './Layout/Layout.jsx';
+import { Loader } from './Loader/Loader.jsx';
+
+// import { HomePage } from 'components/pages/HomePage.jsx';
+// import { MoviesPage } from './pages/MoviesPage.jsx';
+// import { FilmPage } from './pages/FilmPage.jsx';
+import { lazy, Suspense } from 'react';
+
+const LazyHomePage = lazy(() => import('components/pages/HomePage.jsx'));
+const LazyMoviesPage = lazy(() => import('./pages/MoviesPage.jsx'));
+const LazyFilmPage = lazy(() => import('./pages/FilmPage.jsx'));
+
 export const App = () => {
   return (
     <div
       style={{
-        height: '100vh',
+        // height: '100vh',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
+        border: '1px solid black',
+        paddingLeft: '20px',
+        fontSize: 20,
+        color: '#09231a',
+        flexDirection: 'column',
       }}
     >
-      React homework template
+      <header>
+        <nav>
+          <NavLink
+            to="/"
+            style={{
+              margin: '20px',
+              textDecoration: 'none',
+            }}
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/movies"
+            style={{
+              margin: '20px',
+              textDecoration: 'none',
+            }}
+          >
+            Movies
+          </NavLink>
+          <NavLink to="/movies/:movieId/*"></NavLink>
+        </nav>
+      </header>
+      <main>
+        <Suspense fallback={<Loader />}>
+          <Routes>
+            <Route path="/" element={<LazyHomePage />} />
+            <Route path="/movies" element={<LazyMoviesPage />} />
+            <Route path="/movies/:movieId/*" element={<LazyFilmPage />} />
+            <Route
+              path="*"
+              element={
+                <div
+                  style={{
+                    margin: '20px',
+                    color: 'green',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                  }}
+                >
+                  Start with HomePage ☺<Link to="/">➥ Home</Link>
+                </div>
+              }
+            />
+          </Routes>
+        </Suspense>
+      </main>
     </div>
   );
 };
