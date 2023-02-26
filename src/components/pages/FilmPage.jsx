@@ -6,7 +6,7 @@ import {
   useParams,
   useLocation,
 } from 'react-router-dom';
-import { useState, useEffect, lazy, Suspense } from 'react';
+import { useState, useEffect } from 'react';
 import css from '../pages/FilmPage.module.css';
 import { fetchFilmsInfo } from '../ApiFetch/FetchFilmInfo.jsx';
 import { CastPage } from './CastsPage/CastsPage.jsx';
